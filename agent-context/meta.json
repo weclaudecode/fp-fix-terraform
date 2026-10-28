@@ -1,0 +1,67 @@
+{
+  "built_from": "6c48b224aa15e0fb74ea8e1c3fd92c9b21fb1261",
+  "written_at": "2026-10-28T14:05:57.912Z",
+  "sections": {
+    "architecture.md": {
+      "Architecture": {
+        "sha256": "b73169b26c636418a1a7a46537f19a884dd2873ef08cf1a0c663925d7b47f14c",
+        "owner": "analyst"
+      }
+    },
+    "conventions.md": {
+      "Conventions": {
+        "sha256": "f43a0ba2a13e4fe46183a8d50dbc5f88c10c69459a1129e253eb9754038b84bd",
+        "owner": "analyst"
+      }
+    },
+    "glossary.md": {
+      "Glossary": {
+        "sha256": "03593be5fac2f87e04d924d911dee4d9227f3cac627338b1ba0db09ac5b45028",
+        "owner": "analyst"
+      }
+    },
+    "lessons.md": {
+      "Lessons": {
+        "sha256": "c2e18778e9ab37ba544af252110315358f93c6d078edef4ee86006f4812a119a",
+        "owner": "analyst"
+      },
+      "L1: Fix shared module changes in both roots": {
+        "sha256": "a0d4b4be3da83fde985a05e7d460160aae694477de54358ce80bd621e7dd3269",
+        "owner": "analyst"
+      }
+    },
+    "modules.md": {
+      "Modules": {
+        "sha256": "d33ab6fa4c895dafcab4e681bdd102d474dab42df580201037e905e6c65a99bc",
+        "owner": "analyst"
+      }
+    },
+    "overview.md": {
+      "Overview": {
+        "sha256": "4671f2c9b200d297503ffb345fe0e5ff37aefe3ad79a45cb9b6dfa26a36b1ca0",
+        "owner": "analyst"
+      },
+      "Repo": {
+        "sha256": "0ed49de0222baa9f5d87ea9fe613a4d85c34e5f34841a8b743eaa41f784cade7",
+        "owner": "analyst"
+      },
+      "Main flows": {
+        "sha256": "77f313eadf7ef9f3b5f9cf0991a96e071daf1202bb2532a21ce087a4ac2a250f",
+        "owner": "analyst"
+      }
+    },
+    "risk.md": {
+      "Risk notes": {
+        "sha256": "a11976b1675cf16df41fa232018d4b95563a9225681667fd047234028c70e4a0",
+        "owner": "analyst"
+      }
+    },
+    "testing.md": {
+      "Testing": {
+        "sha256": "4a95aacfca8b946207e1ed7dde655b7d0589be55c0f7ee8519f58afd09fe5d7f",
+        "owner": "analyst"
+      }
+    }
+  },
+  "last_lesson": 1
+}
