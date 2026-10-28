@@ -3,6 +3,14 @@ module "logs" {
   name   = "fp-fix-dev-logs"
 }
 
+resource "aws_s3_bucket_versioning" "logs" {
+  bucket = "fp-fix-dev-logs"
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
 # Planted: SSH open to the internet.
 resource "aws_security_group" "admin" {
   name        = "fp-fix-dev-admin"
