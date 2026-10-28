@@ -13,3 +13,4 @@ The shared module is on purpose: a fix there changes both roots.
 
 CI (`.github/workflows/plan.yml`) plans each root on a pull request and uploads `envs/*/plan.json` as the `tfplan-json`
 artifact. The job waits in the `plan-approval` environment until a person approves it.
+
