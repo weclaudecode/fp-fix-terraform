@@ -1,0 +1,37 @@
+# Plans every root on a pull request and uploads the plans as JSON (readiness X5).
+# The job runs in the plan-approval environment, so it waits for a person before it starts (readiness X8).
+# Fixture only: placeholder credentials, no AWS access, nothing is ever applied.
+name: plan
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    environment: plan-approval
+    env:
+      AWS_ACCESS_KEY_ID: placeholder
+      AWS_SECRET_ACCESS_KEY: placeholder
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.15.2
+          terraform_wrapper: false
+      - name: Plan each root
+        run: |
+          set -euo pipefail
+          for root in envs/dev envs/prod; do
+            terraform -chdir="$root" init -input=false -no-color
+            terraform -chdir="$root" plan -input=false -no-color -out=tfplan
+            terraform -chdir="$root" show -json tfplan > "$root/plan.json"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tfplan-json
+          path: envs/*/plan.json
+          if-no-files-found: error
