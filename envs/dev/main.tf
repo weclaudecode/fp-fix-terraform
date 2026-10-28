@@ -3,6 +3,15 @@ module "logs" {
   name   = "fp-fix-dev-logs"
 }
 
+# Versioning is set here, not in modules/bucket, because envs/prod shares the module.
+resource "aws_s3_bucket_versioning" "logs" {
+  bucket = element(split(":::", module.logs.arn), 1)
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
 # Planted: SSH open to the internet.
 resource "aws_security_group" "admin" {
   name        = "fp-fix-dev-admin"
